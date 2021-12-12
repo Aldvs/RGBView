@@ -81,12 +81,21 @@
                                                 <subviews>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="v1K-dy-gNo">
                                                         <rect key="frame" x="-2" y="0.0" width="229" height="31"/>
+                                                        <connections>
+                                                            <action selector="sliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="Af8-Di-3hl"/>
+                                                        </connections>
                                                     </slider>
                                                     <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ABb-ot-qPz">
                                                         <rect key="frame" x="-2" y="45" width="229" height="31"/>
+                                                        <connections>
+                                                            <action selector="sliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="wmj-nu-KxT"/>
+                                                        </connections>
                                                     </slider>
                                                     <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BmO-qm-Sxi">
                                                         <rect key="frame" x="-2" y="90" width="229" height="31"/>
+                                                        <connections>
+                                                            <action selector="sliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="bVh-bP-CDD"/>
+                                                        </connections>
                                                     </slider>
                                                 </subviews>
                                             </stackView>
@@ -109,6 +118,18 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xwa-ts-HK1" secondAttribute="trailing" constant="20" id="xiO-Dn-Zok"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueSlider" destination="BmO-qm-Sxi" id="5ph-Jz-MBg"/>
+                        <outlet property="blueTextLabel" destination="hIB-49-sqa" id="urL-lZ-Jyi"/>
+                        <outlet property="blueValueLabel" destination="6bs-AD-mKb" id="kJq-ca-FPh"/>
+                        <outlet property="colourView" destination="aA0-8f-o2U" id="hrw-5x-ZJ0"/>
+                        <outlet property="greenSlider" destination="ABb-ot-qPz" id="YO9-Vx-XfR"/>
+                        <outlet property="greenTextLabel" destination="eUS-0n-AAl" id="XiI-Eo-yms"/>
+                        <outlet property="greenValueLabel" destination="mwQ-hP-4ht" id="J0h-2j-FcE"/>
+                        <outlet property="redSlider" destination="v1K-dy-gNo" id="uym-o4-lhL"/>
+                        <outlet property="redTextLabel" destination="e5g-Kl-M37" id="TXQ-BY-gZp"/>
+                        <outlet property="redValueLabel" destination="B7f-Ve-Avi" id="wVk-0W-GLy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
