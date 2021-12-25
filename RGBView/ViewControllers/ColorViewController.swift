@@ -28,7 +28,7 @@ class ColorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         colorView.layer.cornerRadius = 15
-        colorView.backgroundColor = startView.backgroundColorç
+        colorView.backgroundColor = startView.backgroundColor
     }
     
     //MARK: - IB Actions
