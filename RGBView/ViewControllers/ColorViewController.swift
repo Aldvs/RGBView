@@ -21,14 +21,14 @@ class ColorViewController: UIViewController {
     @IBOutlet weak var blueTextField: UITextField!
     
 
-    var startView: UIView!
+    var startView: UIColor!
     
     
     //MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         colorView.layer.cornerRadius = 15
-        colorView.backgroundColor = startView.backgroundColor
+        colorView.backgroundColor = startView
     }
     
     //MARK: - IB Actions

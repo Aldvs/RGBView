@@ -18,7 +18,7 @@ class StartViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let colorVC = segue.destination as? ColorViewController else { return }
-        colorVC.startView.backgroundColor = view.backgroundColor
+        colorVC.startView = view.backgroundColor
     }
     
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
