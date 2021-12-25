@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="owT-IU-GET"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="A3P-G5-X02">
@@ -108,13 +108,22 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="l24-EI-hPv">
                                                 <rect key="frame" x="-2" y="0.0" width="113" height="37.5"/>
                                                 <color key="tintColor" systemColor="systemRedColor"/>
+                                                <connections>
+                                                    <action selector="sliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="sUH-zk-VlE"/>
+                                                </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xsB-r9-kK1">
                                                 <rect key="frame" x="-2" y="36.5" width="113" height="38"/>
                                                 <color key="tintColor" systemColor="systemGreenColor"/>
+                                                <connections>
+                                                    <action selector="sliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="nGO-L9-uCp"/>
+                                                </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hjs-xQ-1O7">
                                                 <rect key="frame" x="-2" y="73.5" width="113" height="37.5"/>
+                                                <connections>
+                                                    <action selector="sliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="SKe-tg-gtq"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -152,6 +161,10 @@
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="doneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XGW-Ju-IMR"/>
+                                    <segue destination="1ME-ZP-9lc" kind="unwind" unwindAction="unwindFor:" id="vXy-c0-Rhf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -171,11 +184,16 @@
                     <navigationItem key="navigationItem" id="IaZ-AR-ITr"/>
                     <connections>
                         <outlet property="blueLabel" destination="73a-mv-QLY" id="5Xo-K6-JKw"/>
+                        <outlet property="blueTextField" destination="Jmi-Y6-Rrz" id="n1K-7k-Sic"/>
+                        <outlet property="colorView" destination="aA0-8f-o2U" id="0yK-Na-p89"/>
                         <outlet property="greenLabel" destination="r6K-eu-0wv" id="4Jg-O7-Keu"/>
+                        <outlet property="greenTextField" destination="S3b-Ya-zvC" id="WLy-DH-pxs"/>
                         <outlet property="redLabel" destination="Mav-eS-r7R" id="87X-qv-STB"/>
+                        <outlet property="redTextField" destination="scs-su-37b" id="jDy-et-ze9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="1ME-ZP-9lc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1817" y="94"/>
         </scene>
@@ -199,9 +217,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
