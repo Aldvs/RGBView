@@ -39,26 +39,76 @@ class ColorViewController: UIViewController {
         
         tempColor = CIColor(color: startViewColor)
         
-        redLabel.text = String(format: "%.2f", tempColor.red)
-        greenLabel.text = String(format: "%.2f", tempColor.green)
-        blueLabel.text = String(format: "%.2f", tempColor.blue)
+        redLabel.text = string(from: tempColor.red)
+        greenLabel.text = string(from: tempColor.green)
+        blueLabel.text = string(from: tempColor.blue)
         
-        redSlider.value = Float(round((1000 * tempColor.red) / 1000))
-        greenSlider.value = Float(round((1000 * tempColor.green) / 1000))
-        blueSlider.value = Float(round((1000 * tempColor.blue) / 1000))
+        redSlider.value = roundFloat(from: tempColor.red)
+        greenSlider.value = roundFloat(from: tempColor.green)
+        blueSlider.value = roundFloat(from: tempColor.blue)
         
-        redTextField.text = String(format: "%.2f", tempColor.red)
-        greenTextField.text = String(format: "%.2f", tempColor.green)
-        blueTextField.text = String(format: "%.2f", tempColor.blue)
+        redTextField.text = string(from: tempColor.red)
+        greenTextField.text = string(from: tempColor.green)
+        blueTextField.text = string(from: tempColor.blue)
         
     }
     
     //MARK: - IB Actions
     
-    @IBAction func sliderAction() {
-//        colorView.backgroundColor = UIColor(red: <#T##CGFloat#>, green: <#T##CGFloat#>, blue: <#T##CGFloat#>, alpha: <#T##CGFloat#>)
+    @IBAction func rgbSlider(_ sender: UISlider) {
+    
+        colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
+                                            green: CGFloat(greenSlider.value),
+                                            blue: CGFloat(blueSlider.value), alpha: 1)
+        
+        switch sender {
+        case redSlider:
+            setValue(for: redLabel)
+            setValueTextField(for: redTextField)
+        case greenSlider:
+            setValue(for: greenLabel)
+            setValueTextField(for: greenTextField)
+        default:
+            setValue(for: blueLabel)
+            setValueTextField(for: blueTextField)
+        }
     }
+    
     @IBAction func doneButton(_ sender: Any) {
+    }
+    
+    private func string(from color: CGFloat) -> String {
+        
+        String(format: "%.2f", color)
+    }
+    
+    private func roundFloat(from color: CGFloat) -> Float {
+        
+        Float(round((1000 * color) / 1000))
+    }
+    
+    private func setValue(for labels: UILabel...) {
+        
+        labels.forEach { label in
+            switch label {
+            case redLabel: label.text = string(from: CGFloat(redSlider.value))
+            case greenLabel: label.text = string(from: CGFloat(greenSlider.value))
+            default: label.text = string(from: CGFloat(blueSlider.value))
+            }
+        }
+    }
+    
+    private func setValueTextField(for textFields: UITextField...) {
+        
+        textFields.forEach { textField in
+            switch textField {
+            case redTextField: textField.text = string(from: CGFloat(redSlider.value))
+            case greenTextField: textField.text = string(from: CGFloat(greenSlider.value))
+            default: textField.text = string(from: CGFloat(blueSlider.value))
+            }
+        }
+        
+        
     }
     
 }
