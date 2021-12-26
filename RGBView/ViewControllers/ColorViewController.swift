@@ -30,7 +30,7 @@ class ColorViewController: UIViewController {
     
     var delegate: ColorViewControllerDelegate!
     
-    
+    //почему то так и не понял почему при повторном заходе в настройки слайдер вэлью некоректно отображается по цвету главной вью
     //MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
