@@ -7,22 +7,28 @@
 
 import UIKit
 
+protocol ColorViewControllerDelegate {
+    func getNewColor(_ color: UIColor!)
+}
+
 class StartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let colorVC = segue.destination as? ColorViewController else { return }
         colorVC.startViewColor = view.backgroundColor
+        colorVC.delegate = self
     }
     
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
     }
-
-
+}
+extension StartViewController: ColorViewControllerDelegate {
+    func getNewColor(_ color: UIColor!) {
+        view.backgroundColor = color
+    }
 }
