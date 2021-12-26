@@ -184,11 +184,14 @@
                     <navigationItem key="navigationItem" id="IaZ-AR-ITr"/>
                     <connections>
                         <outlet property="blueLabel" destination="73a-mv-QLY" id="5Xo-K6-JKw"/>
+                        <outlet property="blueSlider" destination="hjs-xQ-1O7" id="OcX-yO-Td2"/>
                         <outlet property="blueTextField" destination="Jmi-Y6-Rrz" id="n1K-7k-Sic"/>
                         <outlet property="colorView" destination="aA0-8f-o2U" id="0yK-Na-p89"/>
                         <outlet property="greenLabel" destination="r6K-eu-0wv" id="4Jg-O7-Keu"/>
+                        <outlet property="greenSlider" destination="xsB-r9-kK1" id="TIE-I9-mP1"/>
                         <outlet property="greenTextField" destination="S3b-Ya-zvC" id="WLy-DH-pxs"/>
                         <outlet property="redLabel" destination="Mav-eS-r7R" id="87X-qv-STB"/>
+                        <outlet property="redSlider" destination="l24-EI-hPv" id="khc-cy-IIa"/>
                         <outlet property="redTextField" destination="scs-su-37b" id="jDy-et-ze9"/>
                     </connections>
                 </viewController>
