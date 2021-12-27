@@ -24,13 +24,13 @@ class ColorViewController: UIViewController {
     @IBOutlet weak var greenTextField: UITextField!
     @IBOutlet weak var blueTextField: UITextField!
     
-
+    //MARK: - Public Properties
     var startViewColor: UIColor!
     var tempColor: CIColor!
     
     var delegate: ColorViewControllerDelegate!
     
-    //почему то так и не понял почему при повторном заходе в настройки слайдер вэлью некоректно отображается по цвету главной вью
+    //почему то так и не понял почему, при повторном заходе в настройки слайдер вэлью некоректно отображается по цвету главной вью
     //MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +87,7 @@ class ColorViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    //MARK: - Private Methods
     private func string(from color: CGFloat) -> String {
         
         String(format: "%.2f", color)
@@ -147,6 +148,7 @@ extension ColorViewController: UITextFieldDelegate {
             blueLabel.text = newValue
             blueSlider.value = Float(newValue) ?? 0.0
         }
+        
         colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
                                             green: CGFloat(greenSlider.value),
                                             blue: CGFloat(blueSlider.value), alpha: 1)
