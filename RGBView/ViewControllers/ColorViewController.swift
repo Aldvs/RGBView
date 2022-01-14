@@ -30,13 +30,10 @@ class ColorViewController: UIViewController {
     
     var delegate: ColorViewControllerDelegate!
     
-    //почему то так и не понял почему, при повторном заходе в настройки слайдер вэлью некоректно отображается по цвету главной вью
     //MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        colorView.layer.cornerRadius = 15
-        
+    
         colorView.backgroundColor = startViewColor
         
         tempColor = CIColor(color: startViewColor)
@@ -44,6 +41,7 @@ class ColorViewController: UIViewController {
         redLabel.text = string(from: tempColor.red)
         greenLabel.text = string(from: tempColor.green)
         blueLabel.text = string(from: tempColor.blue)
+        redLabel.backgroundColor = .brown
         
         redSlider.value = roundFloat(from: tempColor.red)
         greenSlider.value = roundFloat(from: tempColor.green)
@@ -52,12 +50,6 @@ class ColorViewController: UIViewController {
         redTextField.text = string(from: tempColor.red)
         greenTextField.text = string(from: tempColor.green)
         blueTextField.text = string(from: tempColor.blue)
-        
-        redTextField.delegate = self
-        greenTextField.delegate = self
-        blueTextField.delegate = self
-        
-        
         
     }
     

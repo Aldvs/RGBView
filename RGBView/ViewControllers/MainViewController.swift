@@ -12,7 +12,7 @@ protocol ColorViewControllerDelegate {
     func getNewColor(_ color: UIColor!)
 }
 
-class StartViewController: UIViewController {
+class MainViewController: UIViewController {
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -23,7 +23,7 @@ class StartViewController: UIViewController {
     }
 }
 
-extension StartViewController: ColorViewControllerDelegate {
+extension MainViewController: ColorViewControllerDelegate {
     
     func getNewColor(_ color: UIColor!) {
         view.backgroundColor = color

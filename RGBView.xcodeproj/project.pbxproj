@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		843B6C6D277502DD005ECB6E /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B6C6C277502DD005ECB6E /* StartViewController.swift */; };
+		843B6C6D277502DD005ECB6E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B6C6C277502DD005ECB6E /* MainViewController.swift */; };
 		8496FC2327638B3800FD19EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8496FC2227638B3800FD19EF /* AppDelegate.swift */; };
 		8496FC2527638B3800FD19EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8496FC2427638B3800FD19EF /* SceneDelegate.swift */; };
 		8496FC2727638B3800FD19EF /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8496FC2627638B3800FD19EF /* ColorViewController.swift */; };
@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		843B6C6C277502DD005ECB6E /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		843B6C6C277502DD005ECB6E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8496FC1F27638B3800FD19EF /* RGBView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGBView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8496FC2227638B3800FD19EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8496FC2427638B3800FD19EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				8496FC2627638B3800FD19EF /* ColorViewController.swift */,
-				843B6C6C277502DD005ECB6E /* StartViewController.swift */,
+				843B6C6C277502DD005ECB6E /* MainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -174,7 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8496FC2727638B3800FD19EF /* ColorViewController.swift in Sources */,
-				843B6C6D277502DD005ECB6E /* StartViewController.swift in Sources */,
+				843B6C6D277502DD005ECB6E /* MainViewController.swift in Sources */,
 				8496FC2327638B3800FD19EF /* AppDelegate.swift in Sources */,
 				8496FC2527638B3800FD19EF /* SceneDelegate.swift in Sources */,
 			);
